@@ -1,0 +1,16 @@
+body {
+	margin: auto;
+	text-align: center;
+	background-color: #777;
+}
+
+.timeBox {
+	border: solid 1px #fff;
+	border-radius: 6px;
+	padding: 13px;
+	font-size: 6em;
+}
+
+.clock {
+	margin-bottom: 19px;
+}

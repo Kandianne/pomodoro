@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+	<title>Kandi's Pomodoro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+
+
+<body>
+	<h1>MI POMODORO</h1>
+
+	<ui-view></ui-view> <!--Angular UI Tag not html-->
+
+
+	<!-- Libraries & Frameworks -->
+	<script src="/angular/angular.js"></script>
+	<!-- Libraries & Frame Dependencies -->
+	<script src="/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- Source Code (Our own custom code) -->
+	<script src="/javascript/app.js"></script>
+	<!--Factories need to be defined before controllers -->
+	<script src="/javascript/Factories/homeFactory.js"></script>
+	<script src="/javascript/Services/homeService.js"></script>
+	<script src="/javascript/Controllers/homeController.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+
+<div class="col-sm-6">
+	
+	<div class="clock">
+		<span class="timeBox">Hrs{{vm.hrs}}</span>
+		<span class="timeBox">Mins{{vm.mins}}</span>
+		<span class="timeBox">Secs{{vm.secs}}</span>
+	</div>
+
+	<button class="btn btn-success" ng-click="vm.tick()"><span class="glyphicon glyphicon-play"></span></button>
+</div>
+
+<div class="col-sm-6">
+
+	<div class="clock">
+		<span class="timeBox">0</span>
+		<span class="timeBox">0</span>
+		<span class="timeBox">0</span>
+	</div>
+
+	<button class="btn btn-warning" ng-click="vm.decTime()"><span class="glyphicon glyphicon-play"></span></button>
+</div>
+
+
+</div>
