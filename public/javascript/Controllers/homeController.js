@@ -1,6 +1,7 @@
 app.controller("homeController", [ "$interval", function($interval){
 	var vm = this;
-	var interval;
+	var breakInterval;
+	var workInterval;
 	vm.page = "Home";
 
 //------Break time--------------------------------------
@@ -24,47 +25,60 @@ vm.setBreakHrs = function(){
 };
 
 vm.startBreak = function(){
-	interval = $interval(vm.setBreakMins, 1000);
-	interval = $interval(vm.setBreakHrs, 1000);
+	breakInterval = $interval(vm.setBreakMins, 1000);
+	breakInterval = $interval(vm.setBreakHrs, 1000);
 };
 
 //-------Work time------------------------------------------
 
 vm.workSecs = 3;
-vm.workMins = 1;
+vm.workMins = 0;
 vm.workHrs = 0;
 
 vm.setWorkMins = function(){
-	if(vm.workSecs === 1){
-		vm.workMins -= 1;
+	if(vm.workSecs === 0){
 		vm.workSecs = 59;
+
+		if(vm.workMins === 0 && vm.workHrs === 0){
+			vm.workSecs = 0;
+		}
+
+		if(vm.workMins ===0){
+			vm.workMins =0;
+		}
+		else
+			{vm.workMins -= 1;}
+		
 	}
 	else {vm.workSecs -=1;}
 };
 
 vm.setWorkHrs = function(){
 	
-
-	/*if(vm.workSecs === 0 && vm.workMins === 0 && vm.workHrs === 0){
+	if(vm.workSecs === 0 && vm.workMins === 0 && vm.workHrs === 0){
 		vm.startBreak();
-	}*/
+
+	};
 
 
 	if(vm.workMins === 1 && vm.workSecs === 1){
+		
+		if(vm.workMins === 0 && vm.workHrs === 0){
+			vm.workMins = 0;
+		};
+
 		vm.workMins = 59;
 		if(vm.workHrs === 0){
 			vm.workHrs = 0;
 		}
 		else{vm.workHrs -= 1};
-		
-	}
+	};
 };
 
 
-
 vm.startWork = function(){
-	interval = $interval(vm.setWorkMins, 1000);
-	interval = $interval(vm.setWorkHrs, 1000);
+	workInterval = $interval(vm.setWorkMins, 1000);
+	workInterval = $interval(vm.setWorkHrs, 1000);
 };
 
 
