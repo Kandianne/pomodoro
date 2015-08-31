@@ -5,12 +5,27 @@ body {
 }
 
 .timeBox {
-	border: solid 1px #fff;
 	border-radius: 6px;
 	padding: 13px;
+	margin: 6px;
 	font-size: 6em;
+	box-shadow: 1px 3px 7px black;
+	width: 300px;
 }
 
 .clock {
 	margin-bottom: 19px;
+}
+
+#userWorkTime, #userBreakTime {
+	margin-top: 9px;
+}
+.userTime {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	text-align: center;
+	font-size: 1.3em;
+	padding: auto;
+
 }

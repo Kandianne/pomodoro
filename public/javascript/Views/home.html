@@ -3,25 +3,44 @@
 
 
 <div class="col-sm-6">
-
+	<h3>Work Time</h3>
 	<div class="clock">
 		<span class="timeBox">{{vm.workHrs}}</span>
 		<span class="timeBox">{{vm.workMins}}</span>
 		<span class="timeBox">{{vm.workSecs}}</span>
+
+		<div id="userWorkTime">
+			<input class="form control userTime" placeholder="HR" type="number" ng-model="vm.workingHrs"></input>
+			<input class="form control userTime" placeholder="MIN" type="number" ng-model="vm.workingMins"></input>
+			<input class="form control userTime" placeholder="SEC" type="number" ng-model="vm.workingSecs"></input>
+		</div>
+
 	</div>
-	<h3>Work Time</h3>
+
+
 	<button class="btn btn-success" ng-click="vm.startWork()"><span class="glyphicon glyphicon-play"></span></button>
+	<button class="btn btn-danger" ><span class="glyphicon glyphicon-stop"></span></button>
+
 </div>
 
 <div class="col-sm-6">
+	<h3>Break Time</h3>
 	
 	<div class="clock">
 		<span class="timeBox">{{vm.breakHrs}}</span>
 		<span class="timeBox">{{vm.breakMins}}</span>
 		<span class="timeBox">{{vm.breakSecs}}</span>
+
+		<div id="userBreakTime">
+			<input class="form control userTime" placeholder="HR" type="number" ng-model="vm.breakingSecs"></input>
+			<input class="form control userTime" placeholder="MIN" type="number" ng-model="vm.breakingMins"></input>
+			<input class="form control userTime" placeholder="SEC" type="number" ng-model="vm.breakingHrs"></input>
+		</div>
 	</div>
-	<h3>Break Time</h3>
+	
 	<button class="btn btn-info" ng-click="vm.startBreak()"><span class="glyphicon glyphicon-play"></span></button>
+	<button class="btn btn-warning" ><span class="glyphicon glyphicon-stop"></span></button>
+
 </div>
 
 
