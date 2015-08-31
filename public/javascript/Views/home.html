@@ -1,25 +1,27 @@
 
 
-<div class="col-sm-6">
-	
-	<div class="clock">
-		<span class="timeBox">Hrs{{vm.hrs}}</span>
-		<span class="timeBox">Mins{{vm.mins}}</span>
-		<span class="timeBox">Secs{{vm.secs}}</span>
-	</div>
 
-	<button class="btn btn-success" ng-click="vm.tick()"><span class="glyphicon glyphicon-play"></span></button>
+
+<div class="col-sm-6">
+
+	<div class="clock">
+		<span class="timeBox">{{vm.workHrs}}</span>
+		<span class="timeBox">{{vm.workMins}}</span>
+		<span class="timeBox">{{vm.workSecs}}</span>
+	</div>
+	<h3>Work Time</h3>
+	<button class="btn btn-success" ng-click="vm.startWork()"><span class="glyphicon glyphicon-play"></span></button>
 </div>
 
 <div class="col-sm-6">
-
+	
 	<div class="clock">
-		<span class="timeBox">0</span>
-		<span class="timeBox">0</span>
-		<span class="timeBox">0</span>
+		<span class="timeBox">{{vm.breakHrs}}</span>
+		<span class="timeBox">{{vm.breakMins}}</span>
+		<span class="timeBox">{{vm.breakSecs}}</span>
 	</div>
-
-	<button class="btn btn-warning" ng-click="vm.decTime()"><span class="glyphicon glyphicon-play"></span></button>
+	<h3>Break Time</h3>
+	<button class="btn btn-info" ng-click="vm.startBreak()"><span class="glyphicon glyphicon-play"></span></button>
 </div>
 
 
